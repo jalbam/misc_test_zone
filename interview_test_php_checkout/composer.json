@@ -1,0 +1,19 @@
+{
+    "name": "atrapalo/php_test",
+    "description": "Interview test in php for Atrapalo",
+    "require-dev": {
+        "phpunit/phpunit": "^5.4"
+    },
+    "authors": [
+        {
+            "name": "DT Atrapalo",
+            "email": "dt@atrapalo.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Checkout\\": "src/"
+        }
+    }
+}

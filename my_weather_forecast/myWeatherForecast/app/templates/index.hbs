@@ -1,0 +1,42 @@
+<!-- myWeatherForecast challenge by Juan Alba Maldonado -->
+
+{{input value="" size="50" maxlength="50" valueBinding="cityName" placeholder="City name..." key-down="updateCity" autofocus="autofocus" id="city_input"}}
+
+<p id="info_message">
+	{{infoMessage}}
+</p>
+
+{{#each citiesList as |city|}}
+	{{#link-to 'city' city.id}}
+	<div class="city_list_item">
+		<p class="city_icon">
+			<img src="http://openweathermap.org/img/w/{{city.weather.0.icon}}.png" class="city_icon" />
+		</p>
+		<h2 class="city_name">
+			{{city.name}}
+		</h2>
+		<h3 class="city_country">
+			{{city.sys.country}}
+		</h3>
+		<p class="city_weather_main">
+			{{city.weather.0.main}}
+		</p>
+		<p class="city_weather_description">
+			{{city.weather.0.description}}
+		</p>
+		<h5>
+			Temperature: {{city.main.temp}}{{applicationController.temperatureUnitsSymbol}}
+			<br />
+			Min: {{city.main.temp_min}}{{applicationController.temperatureUnitsSymbol}}
+			<br />
+			Max: {{city.main.temp_max}}{{applicationController.temperatureUnitsSymbol}}
+			<br />
+			Humidity: {{city.main.humidity}}%
+		</h5>
+	</div>
+	{{/link-to}}
+{{/each}}
+
+<p id="total_found">
+	Total found: {{citiesList.length}}
+</p>

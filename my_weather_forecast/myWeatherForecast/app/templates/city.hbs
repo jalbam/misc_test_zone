@@ -1,0 +1,35 @@
+<!-- myWeatherForecast challenge by Juan Alba Maldonado -->
+
+<p id="info_message">
+	{{infoMessage}}
+</p>
+
+
+<h2 class="city_name">
+	{{cityInfo.city.name}}
+</h2>
+<h3 class="city_country">
+	{{cityInfo.city.country}}
+</h3>
+
+
+{{#each cityInfo.list as |day|}}
+	<div class="day_list_item">
+		<div class="day_date">{{day.dt}}</div>
+
+		<div class="day_weather_main">{{day.weather.0.main}}</div>
+		<div class="day_weather_description">{{day.weather.0.description}}</div>
+
+		<img src="http://openweathermap.org/img/w/{{day.weather.0.icon}}.png" class="day_icon" />
+		
+		<div class="day_min">Min.: {{day.temp.min}}{{applicationController.temperatureUnitsSymbol}}</div>
+		<div class="day_max">Max.: {{day.temp.max}}{{applicationController.temperatureUnitsSymbol}}</div>
+		
+		<div class="day_morning">Morning: {{day.temp.morn}}{{applicationController.temperatureUnitsSymbol}}</div>
+		<div class="day_day">Day: {{day.temp.day}}{{applicationController.temperatureUnitsSymbol}}</div>
+		<div class="day_night">Night: {{day.temp.night}}{{applicationController.temperatureUnitsSymbol}}</div>
+		<div class="day_eve">Eve: {{day.temp.eve}}{{applicationController.temperatureUnitsSymbol}}</div>
+
+		<div class="day_humidity">Humidity: {{day.humidity}}%</div>
+	</div>
+{{/each}}

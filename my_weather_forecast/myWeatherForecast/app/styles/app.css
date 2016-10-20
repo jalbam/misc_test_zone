@@ -1,0 +1,220 @@
+/* myWeatherForecast challenge by Juan Alba Maldonado */
+
+
+body
+{
+	background-color:#00ddff;
+	text-align:center;
+}
+
+a, a:link
+{
+	text-decoration:none;
+	color:#000000;
+}
+
+
+#main_title
+{
+	color:#aa00ff;
+	text-align:center;
+	font-size:42px;
+	font-family:verdana;
+	margin-bottom:0px;
+	margin-top:0px;
+}
+
+
+#temperature_units_selector
+{
+	text-align:right;
+	color:#aaaaaa;
+	font-size:10px;
+	font-weight:bold;
+	font-family:arial;
+	margin-bottom:0px;
+}
+
+
+button
+{
+	cursor:pointer;
+}
+
+
+button.temperature_unit
+{
+	border:2px solid #0000aa;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	-khtml-border-radius:10px;
+	border-radius:10px;
+	color:#00aa00;
+	width:60px;
+}
+
+
+button.temperature_unit:hover
+{
+	border:2px solid #0000aa;
+}
+
+
+button.temperature_unit.enabled, button.temperature_unit.enabled:hover
+{
+	border:2px solid #ff0000;
+	color:#ff0000;
+}
+
+
+#city_input
+{
+	text-align:center;
+	margin-top:0px;
+	background-color:#00eedd;
+	border:2px dashed #0000aa;
+	color:#000069;
+	font-family:arial;
+	font-size:24px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	-khtml-border-radius:10px;
+	border-radius:10px;
+}
+
+
+#info_message
+{
+	color:#aa0000;	
+	font-weight:bold;
+	font-family:verdana;
+	font-size:12px;
+}
+
+
+.city_list_item
+{
+	background-color:#ddddff;
+	border:1px solid #0000aa;
+}
+
+
+.city_list_item:hover
+{
+	background-color:#eeeeff;
+	cursor:pointer;
+}
+
+.city_icon
+{
+	margin:0px;
+	padding:0px;
+}
+
+
+.city_name
+{
+	color:#ff0000;
+	font-weight:bold;
+	font-family:verdana;
+	font-size:20px;
+	margin-bottom:0px;
+	margin-top:0px;
+	padding:0px;
+}
+
+
+.city_country
+{
+	color:#aa0000;
+	font-style:italic;
+	font-family:verdana;
+	font-size:10px;
+	margin-top:0px;
+}
+
+
+.city_weather_main, .day_weather_main
+{
+	color:#00aa00;
+	font-family:arial;
+	font-size:15px;
+	margin:0px;
+}
+
+
+.city_weather_description, .day_weather_description
+{
+	color:#005500;
+	font-style:italic;
+	font-family:arial;
+	font-size:12px;
+	margin:0px;
+}
+
+
+#total_found
+{
+	color:#333333;	
+	font-family:arial;
+	font-size:10px;
+}
+
+
+
+.day_list_item
+{
+	background-color:#ddddff;
+	border:1px solid #0000aa;
+	padding:5px;
+}
+
+
+.day_icon
+{
+	margin:0;
+	padding:0;
+}
+
+
+.day_date
+{
+	color:#aaaa00;	
+	font-family:arial;
+	font-size:16px;
+}
+
+
+.day_min, .day_max
+{
+	font-family:arial;
+	font-size:26px;
+}
+
+
+.day_min
+{
+	color:#00aadd;	
+}
+
+
+.day_max
+{
+	color:#ff0000;	
+}
+
+
+.day_morning, .day_day, .day_night, .day_eve
+{
+	color:#aaaadd;	
+	font-family:arial;
+	font-size:14px;
+}
+
+
+.day_humidity
+{
+	color:#aa00aa;
+	font-family:verdana;
+	font-size:16px;
+}

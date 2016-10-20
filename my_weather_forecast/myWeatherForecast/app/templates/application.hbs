@@ -1,0 +1,12 @@
+<!-- myWeatherForecast challenge by Juan Alba Maldonado -->
+
+<div id="temperature_units_selector">
+	<button id="temperature_unit_metric" {{action "changeTemperatureUnit" "metric"}} {{bindAttr class=":temperature_unit isCelsius:enabled:disabled"}}>ºC</button>
+	<button id="temperature_unit_imperial" {{action "changeTemperatureUnit" "imperial"}} {{bindAttr class=":temperature_unit isFarenheit:enabled:disabled"}}>ºF</button>
+	<button id="temperature_unit_kevin" {{action "changeTemperatureUnit" "kelvin"}} {{bindAttr class=":temperature_unit isKelvin:enabled:disabled"}}>K</button>
+	{{temperatureUnits}}
+</div>
+
+<h2 id="main_title">myWeatherForecast</h2>
+
+{{outlet}}

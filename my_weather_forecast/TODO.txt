@@ -1,0 +1,21 @@
+[myWeatherForecast challenge by Juan Alba Maldonado]
+
+TODO list:
+
+*) Improve the ugly design by CSS/CSS3 and add transition and cool effects. Adapt it to mobile devices.
+
+*) Stop displaying ISO country codes and display full country names.
+
+*) Localize the app for different languages (and auto-detect the preferred user language the first time) and format numbers and dates according to the country/language. Consider using "today" and "tomorrow" words.
+
+*) Add security measures, flood protection and so on.
+
+*) Learn more about Ember.js and do the things following more strictly its design pattern.
+
+*) Think about caching results for future searches (even for different users).
+
+*) Make it SEO friendly by creating routes (and their URIs) for searched text (representing a city or list of cities).
+
+*) When we are seeing the weather of a city (route /city/:city_id) and we press browser's back button, the previous page does not renders again.
+
+*) Clean, simplify and refactorize code.

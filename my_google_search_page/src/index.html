@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<title>My Google Search Page!</title>
+		<!-- Style: -->
+		<link rel="stylesheet" type="text/css" href="css/main.css" /><!-- Main CSS file. -->
+		<!-- Scripts: -->
+		<script src="js/others.js" language="javascript" type="text/javascript"></script><!-- General functions. -->
+		<script src="js/config.js" language="javascript" type="text/javascript"></script><!-- Config file. -->
+		<script src="js/localization.js" language="javascript" type="text/javascript"></script> <!-- Localization logic and data. -->
+		<script src="js/url.js" language="javascript" type="text/javascript"></script><!-- Functions regarding the URL. -->
+		<script src="js/net.js" language="javascript" type="text/javascript"></script><!-- Networking stuff (AJAX/XHR, REST...). -->
+		<script src="js/control.js" language="javascript" type="text/javascript"></script> <!-- Manage the controller events (keyboard, remote controls, some gamepads...). -->
+		<script src="js/Search.js" language="javascript" type="text/javascript"></script><!-- Search static object. -->
+		<script src="js/main.js" language="javascript" type="text/javascript"></script><!-- Main JS file. -->
+	</head>
+	<body>
+		<!-- Element to show when the page is still loading (JS is not ready), to prevent users from sending the form when CSS and/or JS is not ready yet: -->
+		<div id="wait_window">
+			<div id="wait_message" class="LOCALIZABLE" tr-innerhtml="{{WAIT_MESSAGE}}"></div> <!-- It would be better to use CSS to show an image (any language and culture would understand it) instead of a text (because we need to wait to localize it!). -->
+		</div>
+		<!-- Element to show when there is an error important for the user: -->
+		<div id="error_window" class="hidden">
+			<div id="error_message"></div>
+			<button id="error_button" class="LOCALIZABLE" tr-innerhtml="{{ERROR_BUTTON_TEXT}}"></button>
+		</div>
+		<!-- It will contain the available languages: -->
+		<div id="languages"></div>
+		<!-- Contains the search area: -->
+		<div id="search">
+			<!-- I use onSubmit instead of onClick event because some old browsers will not fire the latter when a mouse is not being used (e.g., when RETURN key is pressed). -->
+			<form id="search_form" action="index.html" method="get">
+				<input id="search_text" name="q" type="text" maxlength="100">
+				<input id="search_button" type="submit" tr-value="{{SEARCH_BUTTON_TEXT}}" type="submit" class="search LOCALIZABLE">
+			</form>
+		</div>
+		<!-- Contains the search results area: -->
+		<div id="search_results">
+			<!-- Results that are images will be displayed here: -->
+			<div id="images">
+				<div id="images_container"></div><!-- It will contain the search items found (if any). -->
+				<div id="images_wait" class="LOCALIZABLE" tr-innerhtml="{{SEARCH_LOAD_WAIT}}"></div><!-- It will display wait feedback to the user (it would be nice to use a spinner image with CSS). -->
+				<div id="images_error" class="LOCALIZABLE" tr-innerhtml="{{SEARCH_ERROR}}"></div><!-- It will display search error feedback to the user. -->
+				<button id="images_more_button" class="LOCALIZABLE" tr-innerhtml="{{SEARCH_MORE_BUTTON_TEXT}}"></button><!-- Button to load more results (shown when there are more results and hidden otherwise). -->
+			</div>
+			<!-- Results that are web sites will be displayed here: -->
+			<div id="webs">
+				<div id="webs_container"></div><!-- It will contain the search items found (if any). -->
+				<div id="webs_wait" class="LOCALIZABLE" tr-innerhtml="{{SEARCH_LOAD_WAIT}}"></div><!-- It will display wait feedback to the user (it would be nice to use a spinner image with CSS). -->
+				<div id="webs_error" class="LOCALIZABLE" tr-innerhtml="{{SEARCH_ERROR}}"></div><!-- It will display search error feedback to the user. -->
+				<button id="webs_more_button" class="LOCALIZABLE" tr-innerhtml="{{SEARCH_MORE_BUTTON_TEXT}}"></button><!-- Button to load more results (shown when there are more results and hidden otherwise). -->
+			</div>
+		</div>
+		<!-- Credits: -->
+		<div id="credits">
+			My Google Search Page by Joan Alba Maldonado
+		</div>
+	</body>
+</html>

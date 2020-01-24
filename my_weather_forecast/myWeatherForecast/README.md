@@ -1,4 +1,4 @@
-myWeatherForecast challenge by Juan Alba Maldonado
+myWeatherForecast challenge by [Juan Alba Maldonado](https://joanalbamaldonado.com/)
 
 # My-weather-forecast
 
